@@ -11,7 +11,42 @@
 </head>
 <body>
     
+    <header>
+        <h1>Minha Loja</h1>
+        <p>Vitrine simples de produtos</p>
+    </header>
 
+    <main>
+      <section class="painel">
+        <h2 id="titulo-formulario">Cadastrar produto</h2>
+        <form id="form-produto">
+          <input type="hidden" id="produto-id">
+          <label for="title">Nome do produto</label>
+          <input id="title" type="text" placeholder="Ex.: Camiseta" required>
+          <label for="description">Descrição</label>
+          <textarea id="description" placeholder="Descreva o produto" required></textarea>
+          <label for="category">Categoria</label>
+          <input id="category" type="text" placeholder="Ex.: roupas" required>
+          <label for="price">Preço (R$)</label>
+          <input id="price" type="number" min="0" step="0.01" placeholder="0,00" required>
+          <label for="thumbnail">URL da imagem (opcional)</label>
+          <input id="thumbnail" type="url" placeholder="https://...">
+          <div class="botoes">
+            <button type="submit" id="btn-salvar">Cadastrar</button>
+            <button type="button" id="btn-cancelar" class="secundario escondido">Cancelar edição</button>
+          </div>
+        </form>
+        <p id="mensagem" role="status"></p>
+      </section>
+  
+      <section>
+        <h2>Produtos</h2>
+        <div id="lista-produtos" class="produtos">
+          <p>Carregando produtos...</p>
+        </div>
+      </section>
+    </main>
+    <footer>Projeto de avaliação — Construção de Sites 2</footer>
     
 </body>
 </html>
